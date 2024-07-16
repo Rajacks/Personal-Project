@@ -1,67 +1,113 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
 body {
-  font-family: "Roboto";
-  background-color: skyblue;
+  font-family: "Roboto", sans-serif;
+  background-color: #50B1C7; /* Original sky blue color */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 header {
   padding: 1rem;
   display: grid;
   grid-template-columns: 100px auto;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 header img {
-  max-width: 130%;
+  max-width: 100%;
   height: auto;
 }
+
 h1 {
-  align-self: center;
+  font-size: 2rem;
+  color: #0e2038;
 }
+
 .card {
   border: 1px solid #000;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #f7f7fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .card:hover {
-  border: 3px solid #000;
-  background-color: #f1f1f1;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
 .card img {
   max-width: 50%;
   height: auto;
   float: right;
+  margin-left: 1rem;
 }
+
 .card p {
   padding: 1rem;
+  font-size: 1rem;
+  color: #666;
 }
+
 .temp {
   font-size: 2.2rem;
   font-weight: bold;
   padding: 1rem;
+  color: #84C1AC;
   animation: sizes 3s linear 1s infinite alternate;
 }
+
 main {
-  margin: 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
+
 footer {
   padding: 1rem;
   text-align: center;
   background-color: #DDE1D0;
   color: #4a4a4d;
+  width: 100%;
+  margin-top: auto;
 }
+
 #cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 1rem;
 }
+
 #user-input {
   margin: 10px 2px 15px 1px;
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 label {
   display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0e2038;
 }
+
 label input {
   display: block;
   width: 100%;
@@ -69,7 +115,10 @@ label input {
   padding: 0.6rem;
   margin-left: 0.1rem;
   background-color: #DDE1D0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
+
 button {
   display: block;
   background-color: #0e2038;
@@ -79,10 +128,15 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
+  background-color: #f7f7fa;
+  color: #0e2038;
   font-weight: bolder;
 }
+
 @keyframes sizes {
   from {
     font-size: 2.2rem;
